@@ -1,0 +1,21 @@
+{
+  "bin": {
+    "nunjucks": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "glob": "^7.2.0",
+    "glob2base": "^0.0.12",
+    "minimist": "^1.2.5",
+    "nunjucks": "^3.2.3"
+  },
+  "files": [
+    "index.js"
+  ],
+  "name": "@udontoinari/nunjucks-cli",
+  "scripts": {
+    "test": "node index.js \"src/**/*.{html,njk}\" --dir dist --context \"src/views/data.json\""
+  },
+  "type": "module",
+  "version": "0.0.1"
+}
