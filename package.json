@@ -16,7 +16,7 @@
   ],
   "name": "@udontoinari/nunjucks-cli",
   "scripts": {
-    "test": "node index.js \"src/**/*.{html,njk}\" --dir dist --context \"src/views/data.json\" --watch"
+    "test": "node index.js \"src/**/*.{html,njk}\" --dir dist"
   },
   "type": "module",
   "version": "0.0.1"

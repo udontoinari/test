@@ -28,17 +28,16 @@ const base = glob2base(glob(pattern));
 argv.dir = argv.dir || base;
 
 const context = {
-  _data: null,
+  _data: {},
   get data() {
-    if (!this._data) this.data = argv.context;
+    if (!this._data.env) this.data = argv.context;
     return this._data;
   },
   set data(file) {
     try {
-      this._data = JSON.parse(fs.readFileSync(file));
+      this._data = file ? JSON.parse(fs.readFileSync(file)) : {};
     } catch (error) {
       console.error(chalk.red(error));
-      this._data = {};
     }
     this._data.env = process.env.NODE_ENV || 'development';
   }
