@@ -62,7 +62,7 @@ const render = async (file) => {
     const output = path.join(argv.dir, input.replace(/\.\w+$/, '.html'));
     fs.mkdirSync(path.dirname(output), { recursive: true });
     fs.writeFileSync(output, beautify.html(string, options));
-    console.log(chalk.blue(`Rendered: ${output}`));
+    console.log(chalk.green(`Rendered: ${output}`));
   }
 };
 
